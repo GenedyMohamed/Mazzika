@@ -14,7 +14,7 @@ class CreateArtistsTable extends Migration
     public function up()
     {
         Schema::create('artists', function (Blueprint $table) {
-            $table->increments('artist_id');
+            $table->increments('id')->unsigned();
             $table->string('username')->unique();
             $table->string('password');
             $table->timestamps();
