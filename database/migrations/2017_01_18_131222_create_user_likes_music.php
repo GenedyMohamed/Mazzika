@@ -36,10 +36,10 @@ class CreateUserLikesMusic extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
         });
-        Schema::table('user_likes_music', function(Blueprint $table)
-        {
-            $table->primary(['user_id', 'music_id']);
-        });
+//        Schema::table('user_likes_music', function(Blueprint $table)
+//        {
+//            $table->primary(['user_id', 'music_id']);
+//        });
     }
 
     /**
