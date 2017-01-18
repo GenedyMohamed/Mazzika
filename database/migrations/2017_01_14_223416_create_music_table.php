@@ -22,11 +22,10 @@ class CreateMusicTable extends Migration
             $table->integer('artist_id');
         });  
 
-                Schema::table('music', function(Blueprint $table)
-    {
+        Schema::table('music', function(Blueprint $table){
         $table->foreign('artist_id')
                 ->references('id')
-                ->on('music')
+                ->on('artists')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
     });  
