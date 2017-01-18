@@ -19,14 +19,14 @@ class CreateMusicTable extends Migration
             $table->string('reviews_no');
             $table->string('link');
             $table->timestamps();
-            $table->integer('artist_id');
+            $table->integer('artist_id')->unsigned();
         });  
 
                 Schema::table('music', function(Blueprint $table)
     {
         $table->foreign('artist_id')
                 ->references('id')
-                ->on('music')
+                ->on('artists')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
     });  
