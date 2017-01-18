@@ -14,7 +14,7 @@ class CreateMusicTable extends Migration
     public function up()
     {
         Schema::create('music', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('name');
             $table->string('reviews_no');
             $table->string('link');
@@ -24,7 +24,7 @@ class CreateMusicTable extends Migration
 
                 Schema::table('music', function(Blueprint $table)
     {
-        $table->foreign('user_id')
+        $table->foreign('artist_id')
                 ->references('id')
                 ->on('music')
                 ->onUpdate('cascade')
