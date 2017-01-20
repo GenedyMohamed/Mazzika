@@ -19,6 +19,8 @@ class CreateMusicTableUpdatedAgainFinal extends Migration
             $table->string('reviews_no');
             $table->string('link');
             $table->timestamps();
+
+
             /*
              ** Creating a foreign key
              */
