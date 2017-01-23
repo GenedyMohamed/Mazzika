@@ -6,4 +6,6 @@
 Homestead.json
 Homestead.yaml
 .env
+.env~
+.gitignore~
 _ide_helper.php
