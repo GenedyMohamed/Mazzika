@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/artist', function () {
+    return view('/artist/artist');
+});
