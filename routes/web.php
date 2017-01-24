@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/m/{name}', "MusicController@fetch");
+Route::get('/m/{name}', "MusicController@fetch_info");
 
 ?>
