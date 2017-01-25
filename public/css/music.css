@@ -1,3 +1,117 @@
 /**
 * This is the style sheet for the music item page
 */
+.item
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	display:table-row;
+	width:100%;
+}
+.item #icon
+{
+	margin-left: 20%;
+	float:left;
+	max-height: 25%;
+	max-width:25%;
+	padding-right: 30px;
+}
+.item  img
+{
+	height: 100%;
+	width: 100%;
+
+}
+
+.item #info
+{
+	float:left;
+}
+.item #title
+{
+	font-size:100px;
+	font-family:headline;
+}
+
+#attr
+{
+	font-size:25px;
+	font-family: timesnewroman;
+}
+
+/*CSS for reviews table */
+.reviews
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+} 
+.reviews p
+{
+	text-align: left;
+	font-size: 20px;
+}
+.reviews table 
+{
+	margin-left:20%;
+	text-align: left;
+}
+#head
+{
+	margin-left:20%;
+	font-weight: bold;
+	font-size:50px;
+	text-align: left;
+}
+
+.reviews #ico
+{
+	height:50px;
+	width:50px;
+	display:inline;
+	padding-right:10px;
+}
+.reviews img
+{
+	width:50px;
+	height:auto;
+	display:inline;
+}
+.reviews #user
+{
+	font-size:30px;
+	color:#4389f9;
+	width:100%;
+}
+.reviews #text
+{
+	text-align: left;
+	line-height:10%;
+	font-size:20px;
+}
+.reviews #date
+{
+	font-size:12px;
+	color:gray;
+}
+
+/* The CSS for the review submit*/
+
+.submit_review
+{
+	padding-top:10px;
+	margin-left:20%;
+}
+.from-group
+{
+	display:inline-block;
+}
+.form-control
+{
+	width:50%;
+	display:inline-block;
+}
+
+
+
