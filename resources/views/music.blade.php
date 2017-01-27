@@ -1,88 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+<div class="row">
+  <div class="col-md-4 col-md-offset-11 dropdown"><p class="lead">Sort by:
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">recent
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">name</a></li>
+    <li><a href="#">views</a></li>
+  </ul></p>
+ </div>
+</div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+<table class="table table-striped">
+  ...
+</table>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .top {
-                position: absolute;
-                top: 15px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                text-align: center;
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+<div class="row">
+  <div class="col-md-8">.col-md-8</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-6">.col-md-6</div>
+  <div class="col-md-6">.col-md-6</div>
+</div>
 
             <div class="content">
                 <div class="title m-b-md top">
@@ -98,5 +45,8 @@
                 </div>
             </div>
         </div>
+
+
     </body>
 </html>
+@endsection

@@ -21,3 +21,7 @@ Route::get('/music', function () {
 
 Auth::routes();
 
+Route::get('/', function () {
+    return view('homepage');
+});
+
