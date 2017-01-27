@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMusicTable extends Migration
+class CreateMusicTableUpdatedAgainFinal extends Migration
 {
     /**
      * Run the migrations.
@@ -19,16 +19,17 @@ class CreateMusicTable extends Migration
             $table->string('reviews_no');
             $table->string('link');
             $table->timestamps();
-            $table->integer('artist_id');
-        });  
 
-        Schema::table('music', function(Blueprint $table){
-        $table->foreign('artist_id')
-                ->references('id')
-                ->on('artists')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-    });  
+
+            /*
+             ** Creating a foreign key
+             */
+            $table->integer('artist_id')->unsigned()->index();
+            $table->foreign('artist_id')->references('id')->on('artists')->onDelete('CASCADE');
+
+        });
+
+
     }
 
     /**
