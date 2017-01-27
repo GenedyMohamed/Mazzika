@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<<<<<<< HEAD
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -86,17 +85,6 @@
             padding: 0 125px;
         }
     </style>
-=======
-    <title>Mazzika - {{$title}}</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">      
-    <link href = "/css/layout.css" rel = "stylesheet" type = "text/css"/>
-    
-    <!-- Custom style sheets for 'content'-->
-    @yield('style')
-
->>>>>>> 9dcd2a3ba0b7982e691551a6b4d85d50d3eab125
 </head>
 <body>
     <div id = "wrap">
@@ -134,19 +122,11 @@
             <footer class="footer" id = "footer">
                 <div class="container">
                     <br>
-<<<<<<< HEAD
                     <span>
-=======
-                    <span id = "cpr">
->>>>>>> 9dcd2a3ba0b7982e691551a6b4d85d50d3eab125
                         TechHub © 2017
                     </span>
                 </div>
             </footer>
             @show
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 9dcd2a3ba0b7982e691551a6b4d85d50d3eab125
