@@ -19,7 +19,11 @@
 			<span id = "attr">
 				<p id = "artist">song By {{$artist}}</p>
 				<p>Created on {{$created_at}} </p>
-				<p>{{$likes}}  <i class="fa fa-thumbs-up" aria-hidden="true"></i></p>
+				<p>{{$likes}}  
+				@if(auth::check())
+					<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+				@endif
+				</p>
 			</span>
 		</div>
 	</div>
@@ -31,10 +35,10 @@
 		<p id = "head">reviews</p>
 		<table>
 			<?php
-				$n = intval($reviews_no);
+				$n = sizeof($reviews);
 				for($i = 0; $i < $n; $i++)
 				{
-						echo('<tr id = "review">');
+						echo('<tr id = "rev">');
 
 						// profile picture
 						echo('<td id = "ico">'. '<img src = "/img/default_user.png"/>' . '</td>');
@@ -52,13 +56,16 @@
 		</table>
 		@endif
 	</div>
-	<div>
-        <form class="submit_review">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder = "Your Review Goes Here">
-            </div>
-            <button type="submit" class="btn btn-primary glyphicon glyphicon-pencil"> submit</button>
-        </form>
-        
-	<div>
+	@if(auth::check())
+
+		<div>
+	        <form class="submit_review" method = "post" action = "/m/just">
+	            <div class="form-group">
+	                <input name = "review" type="text" class="form-control" placeholder = "Your Review Goes Here">
+	            </div>
+	            <button type="submit" class="btn btn-primary glyphicon glyphicon-pencil"> submit</button>
+	        </form>
+	        
+		</div>
+	@endif
 @endsection

@@ -17,4 +17,10 @@ Route::get('/', function () {
 
 Route::get('/m/{name}', "MusicController@fetch_info");
 
-?>
+Route::post('/m/{name}', "MusicController@add_review");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+

@@ -46,5 +46,20 @@ class MusicController extends Controller
         
 
         return view('music_info',['title' => $info[0]['name'], 'info' => $info[0], 'artist' => $json]);
-    }    
+    }
+
+    /**
+    * This function add a review that was posted by the reader
+    */
+    public function add_review($name)
+    {
+        $user_id = Auth::id();
+        $music_id = DB::table('music')->where('name', $name)->value('id');
+        $review = $param->input('review');
+        DB::table('users')->insert(['review' => $review, 'created_at' => time(), 'update_at' => time(), 'user_id' => $user_id,'user_id' => $user_id, 'music_id' =>$music_id]);
+        header('Location:' . $name);
+
+    }
+   
 }
+

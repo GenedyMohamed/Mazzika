@@ -51,6 +51,8 @@
 {
 	text-align: left;
 	font-size: 20px;
+	margin: 0.5%;
+	
 }
 .reviews table 
 {
@@ -87,7 +89,7 @@
 .reviews #text
 {
 	text-align: left;
-	line-height:10%;
+	line-height:130%;
 	font-size:20px;
 }
 .reviews #date
@@ -102,6 +104,7 @@
 {
 	padding-top:10px;
 	margin-left:20%;
+
 }
 .from-group
 {
