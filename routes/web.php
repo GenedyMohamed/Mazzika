@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/music', function () {
+    return view('music');
+});
+
+Auth::routes();
+
