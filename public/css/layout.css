@@ -1,0 +1,83 @@
+/**
+* This is the style sheet for the defualt layout
+*/
+
+  html, body {
+            background-color: #fff;
+            color: black;
+            font-family: 'Indie Flower', cursive;
+            font-weight: 120;
+            hieght:0;
+            display:block;
+        }
+
+        .full-height {
+            height: 100%;
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 84px;
+        }
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+        html,
+        body {
+            height: 100%;
+            /* The html and body elements cannot have any padding or margin. */
+        }
+
+        /* Wrapper for page content to push down footer */
+        #wrap {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            /* Negative indent footer by its height */
+            margin: 0 auto -50px;
+            /* Pad the bottom by footer height */
+            padding: 0 0 50px;
+            font-size:16px;
+        }
+
+        /* Set the fixed height of the footer here */
+        footer {
+            font-size:18px;
+            color:black;
+            text-align: center;
+        }
+
+
+        /* Custom page CSS
+        -------------------------------------------------- */
+    
