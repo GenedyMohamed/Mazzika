@@ -15,6 +15,28 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+Route::get('/music', 'AllMusicController@index');
+
+Auth::routes();
+
+Route::get('/', function () {
+    return view('homepage');
+});
+Route::get('/m/{name}', "MusicController@fetch_info");
+
+Route::post('/m/{name}', "MusicController@add_review");
+
+Route::get('/test', function()
+	{
+		return view('test');
+	});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+
+
 Route::get('/artist', function () {
     return view('/artist/artist');
 });
