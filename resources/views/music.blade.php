@@ -3,7 +3,8 @@
 
 
 <div class="row">
-  <div class="col-md-4 col-md-offset-11 dropdown">Sort by:
+  <div class = "col-md-1 col-md-offset-10">Sort By:</div>
+  <div class="col-md-1 dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">recent
   <span class="caret"></span></button>
   <ul class="dropdown-menu">
