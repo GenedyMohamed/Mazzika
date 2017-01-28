@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-Route::get('/music', function () {
-    return view('music');
-});
+Route::get('/music', 'AllMusicController@index');
 
 Auth::routes();
 
