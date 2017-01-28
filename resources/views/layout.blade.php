@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
       <title>Mazzika - @yield('title')</title>
     <!-- Latest compiled and minified CSS -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +12,7 @@
   <!-- latest compiled and minified js-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <script src= "/js/jquery-3.1.1.min.js"></script>
 
  <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 <!-- this is the css for the layout -->

@@ -11,7 +11,7 @@
 }
 .item #icon
 {
-	margin-left: 20%;
+	margin-left: 10%;
 	float:left;
 	max-height: 25%;
 	max-width:25%;
@@ -56,12 +56,12 @@
 }
 .reviews table 
 {
-	margin-left:20%;
+	margin-left:10%;
 	text-align: left;
 }
 #head
 {
-	margin-left:20%;
+	margin-left:10%;
 	font-weight: bold;
 	font-size:50px;
 	text-align: left;
@@ -103,7 +103,7 @@
 .submit_review
 {
 	padding-top:10px;
-	margin-left:20%;
+	margin-left:10%;
 
 }
 .from-group
@@ -116,5 +116,12 @@
 	display:inline-block;
 }
 
+
+/**Like button**/
+
+.fa:hover
+{
+	cursor:pointer;
+}
 
 

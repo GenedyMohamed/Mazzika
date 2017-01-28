@@ -18,6 +18,6 @@
         	font-size:20px;
         }
 	</style>
-	<h1>Not Found ☹️</h1>
-	<p>The item you were looking for was not found. it may have been deleted by the Artist or it may have not existed. please check the spelling and try again</p>
+	<h1>{{$head}}☹️</h1>
+	<p>{{$body}}</p>
 @endsection
