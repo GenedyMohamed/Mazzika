@@ -3,13 +3,14 @@
 @section('content')
 
 <div class="row">
-  <div class="col-md-4 col-md-offset-11 dropdown"><p class="lead">Sort by:
+  <div class = "col-md-1 col-md-offset-10">Sort By:</div>
+  <div class="col-md-1 dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">recent
   <span class="caret"></span></button>
   <ul class="dropdown-menu">
     <li><a href="#">name</a></li>
     <li><a href="#">views</a></li>
-  </ul></p>
+  </ul>
  </div>
 </div>
 
