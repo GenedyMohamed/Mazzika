@@ -23,15 +23,10 @@ Route::get('/artist/update', function () {
     return view('/artist/update');
 });
 
-Route::post('/artist/update', function (){
-
-});
-
+Route::post('/artist/update', 'MusicController@update');
 
 Route::get('/artist/delete', function () {
     return view('/artist/delete');
 });
 
-Route::post('/artist/delete', function(){
-
-});
+Route::post('/artist/delete', 'MusicController@delete');
