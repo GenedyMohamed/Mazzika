@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('mylayout')
 
 @section('title')
     Artist

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateMusicTableUpdatedAgainFinal extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,23 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('music', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('reviews_no');
+            $table->string('link');
             $table->timestamps();
+
+
+            /*
+             ** Creating a foreign key
+             */
+            $table->integer('artist_id')->unsigned()->index();
+            $table->foreign('artist_id')->references('id')->on('artists')->onDelete('CASCADE');
+
         });
+
+
     }
 
     /**
@@ -30,6 +39,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('music');
     }
 }
