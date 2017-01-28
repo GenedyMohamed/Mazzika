@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+<<<<<<< HEAD
 use App\user_reviews_music as user_reviews_music;
 use App\user_likes_music as user_likes_music;
 
 use auth;
 
+=======
+use App\Music;
+>>>>>>> fd6467bfec8964e2f14b6eed87d2c53f243a1cee
 class MusicController extends Controller
 {
 	 public function fetch_info($name)
@@ -120,5 +124,21 @@ class MusicController extends Controller
 
     }
    
-}
+    public function update(Request $request)
+    {
+        $data = array_filter($request->all(), function ($element) {
+            return $element != NULL;
+        });
+        $music = Music::find($data['id']);
+        $music->update($data);
+        return back()->with('success', true);
+    }
 
+    public function delete(Request $request)
+    {
+        $id = $request->all()['id'];
+        Music::find($id)->delete();
+        return back()->with('success', true);
+    }
+
+}

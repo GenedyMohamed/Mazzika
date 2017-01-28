@@ -1,6 +1,6 @@
 @extends('layout')
-
 @section('content')
+
 
 <div class="row">
   <div class = "col-md-1 col-md-offset-10">Sort By:</div>
@@ -15,7 +15,7 @@
 </div>
 
 <table class="table table-striped">
-  ...
+  $json
 </table>
 
 <div class="row">
