@@ -31,3 +31,19 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
+
+Route::get('/artist', function () {
+    return view('/artist/artist');
+});
+
+Route::get('/artist/update', function () {
+    return view('/artist/update');
+});
+
+Route::post('/artist/update', 'MusicController@update');
+
+Route::get('/artist/delete', function () {
+    return view('/artist/delete');
+});
+
+Route::post('/artist/delete', 'MusicController@delete');
