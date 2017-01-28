@@ -17,6 +17,8 @@
     <body>
         @yield('navbar')
 
+        @yield('content')
+
         <footer>
             @yield('footer')
         </footer>

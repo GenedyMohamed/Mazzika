@@ -18,3 +18,20 @@ Route::get('/', function () {
 Route::get('/artist', function () {
     return view('/artist/artist');
 });
+
+Route::get('/artist/update', function () {
+    return view('/artist/update');
+});
+
+Route::post('/artist/update', function (){
+
+});
+
+
+Route::get('/artist/delete', function () {
+    return view('/artist/delete');
+});
+
+Route::post('/artist/delete', function(){
+
+});

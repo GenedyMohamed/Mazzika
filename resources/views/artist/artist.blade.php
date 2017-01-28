@@ -5,11 +5,11 @@
 @stop
 
 @section('navbar')
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse">
         <a href="" class="navbar-brand">My Music</a>
         <a href="" class="navbar-brand">Upload</a>
-        <a href="" class="navbar-brand">Delete</a>
-        <a href="" class="navbar-brand">Update</a>
+        <a href="/artist/delete" class="navbar-brand">Delete</a>
+        <a href="/artist/update" class="navbar-brand">Update</a>
     </nav>
 @stop
 
