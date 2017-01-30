@@ -30,12 +30,12 @@
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Mazzika</a>
+                        <a class="navbar-brand" href="/home">Mazzika</a>
+                        @if(auth::check())
+                          <a class="navbar-brand" href="/">Explore Music</a>
+                        @endif
+          
                     </div>
-
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                    </ul>
                     <form class="navbar-form navbar-right">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search">
