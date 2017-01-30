@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-<<<<<<< HEAD
+
 use App\user_reviews_music as user_reviews_music;
 use App\user_likes_music as user_likes_music;
 
 use auth;
 
-=======
 use App\Music;
->>>>>>> fd6467bfec8964e2f14b6eed87d2c53f243a1cee
+
 class MusicController extends Controller
 {
 	 public function fetch_info($name)
@@ -56,11 +55,12 @@ class MusicController extends Controller
         $info[0]["users"] = $users;
         
         // checks if the user likes the song already
+        $found = false;
+
       if(user_likes_music::where('user_id','=', auth::id())->count() > 0)
          {
             $likes = user_likes_music::where('user_id','=', auth::id())->get();
             $likes = json_decode($likes, true);
-            $found = false;
             foreach($likes as $like)
             {
                 if($like["music_id"] == $info[0]['id'])
