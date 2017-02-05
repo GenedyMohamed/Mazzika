@@ -75,7 +75,7 @@
         /* Set the fixed height of the footer here */
         footer {
             height: 50px;
-            background-color: #090909;
+            background-color: #216a94;
         }
 
 
@@ -122,7 +122,7 @@
             <footer class="footer" id = "footer">
                 <div class="container">
                     <br>
-                    <span>
+                    <span style="color: white">
                         TechHub © 2017
                     </span>
                 </div>
