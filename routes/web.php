@@ -12,16 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('homepage');
+    return view('welcome');
 });
 
 Route::get('/music', 'AllMusicController@index');
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('homepage');
-});
+
 Route::get('/m/{name}', "MusicController@fetch_info");
 
 
