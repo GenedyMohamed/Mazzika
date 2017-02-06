@@ -13,41 +13,31 @@
   </ul>
  </div>
 </div>
+<br>
 
 <table class="table table-striped">
-  $json
+  <tr>
+    <td>Name</td>
+    <td>Reviews</td>
+    <td>Link</td>
+    <td>Created at</td>
+    <td>Artist</td>
+  </tr>
+  <?php
+  foreach ($music as $song){
+  ?>
+  <tr>
+    <td><a href={{'/m/'.$song->name}}><?php echo $song -> name ?></a> </td>
+    <td><?php echo $song -> reviews_no ?> </td>
+    <td><?php echo $song ->  link ?> </td>
+    <td><?php echo $song -> created_at ?> </td>
+    <td><?php echo $song -> artist_id ?> </td>
+  </tr>
+<?php
+}
+?>
 </table>
-
-<div class="row">
-  <div class="col-md-8">.col-md-8</div>
-  <div class="col-md-4">.col-md-4</div>
-</div>
-<div class="row">
-  <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4">.col-md-4</div>
-</div>
-<div class="row">
-  <div class="col-md-6">.col-md-6</div>
-  <div class="col-md-6">.col-md-6</div>
-</div>
-
-            <div class="content">
-                <div class="title m-b-md top">
-                    Music
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
         </div>
-
-
     </body>
 </html>
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\AllMusic;
 
 class AllMusicController extends Controller
 {
@@ -16,8 +17,21 @@ class AllMusicController extends Controller
         {
             return view('apology',['title' =>'Not Found']);
         }
+        $music = AllMusic::all();
+        return view('music',['music' => $music]);
 
-        return view('music',['music'=>$json]);
+    }
+    public static function getContinuity($source) {
 
+        try{
+
+            $getContinuity = DB::table('music');
+
+            return $getContinuity;
+
+        } catch (\Exception $ex) {
+
+            return false;
+        }
     }
 }
