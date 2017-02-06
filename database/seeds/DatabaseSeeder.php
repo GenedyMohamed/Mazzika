@@ -20,9 +20,10 @@ class DatabaseSeeder extends Seeder
         
         DB::table('music')->insert([
             'name' => str_random(10),
-            'reviews_no' => 20,
+            'reviews_no' => gmp_random_range(0,255),
             'link' => 'soundcloud.com',
-            'artist_id' => 1
+            'created_at' =>  date("Y-m-d H:i:s"),
+            'artist_id' => 2
         ]);
     }
 }
