@@ -52,3 +52,9 @@ Route::get('/artist/delete', function () {
 });
 
 Route::post('/artist/delete', 'MusicController@delete');
+
+
+//signed in user
+Route:: get ('/userhome/{id}', function () {
+    return view('user');
+});
