@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
         <style>
             html, body {
                 background-color: #fff;
@@ -40,7 +42,11 @@
                 right: 10px;
                 top: 18px;
             }
-
+            .top-left {
+                position: absolute;
+                left:10px;
+                top: 18px;
+            }
             .content {
                 text-align: center;
             }
@@ -73,23 +79,33 @@
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
+                        {{--<form>--}}
+                            {{--<div class="form-group">--}}
+                                {{--<input type="text" class="form-control" placeholder="Search">--}}
+                            {{--</div>--}}
+                            {{--<button type="submit" class="btn btn-primary glyphicon glyphicon-search"></button>--}}
+                        {{--</form>--}}
                     @endif
+                </div>
+                <div class="top-left links">
+                    <a href="{{url('/music')}}"> Explore Music</a>
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Mazzika
                 </div>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg" placeholder="Search">
+                        <button type="submit" class="btn btn-primary glyphicon glyphicon-search"></button>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                    </div>
+
+                </form>
             </div>
+
         </div>
     </body>
 </html>

@@ -13,6 +13,9 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
+    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">--}}
+
+
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -74,6 +77,14 @@
                             </li>
                         @endif
                     </ul>
+
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-primary glyphicon glyphicon-search"></button>
+                    </form>
+
                 </div>
             </div>
         </nav>

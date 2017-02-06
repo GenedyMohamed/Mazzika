@@ -12,16 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('homepage');
+    return view('welcome');
 });
 
 Route::get('/music', 'AllMusicController@index');
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('homepage');
-});
 Route::get('/m/{name}', "MusicController@fetch_info");
 
 
@@ -53,7 +50,6 @@ Route::get('/artist/delete', function () {
 Route::post('/artist/delete', 'MusicController@delete');
 
 
-//signed in user
-Route:: get ('/userhome/{id}', function () {
-    return view('user');
-});
+
+Route::get('/home', 'HomeController@index');
+

@@ -18,8 +18,15 @@
 <!-- this is the css for the layout -->
 <link rel = "stylesheet" href="/css/layout.css" type="text/css"/>
 
+
 <!--Here goes any neccessary style sheets -->
 @yield('style')
+        /* Set the fixed height of the footer here */
+        footer {
+            height: 50px;
+            background-color: #216a94;
+        }
+
 
 
 </head>
@@ -32,7 +39,7 @@
                     <div class="navbar-header">
                         <a class="navbar-brand" href="/home">Mazzika</a>
                         @if(auth::check())
-                          <a class="navbar-brand" href="/">Explore Music</a>
+                          <a class="navbar-brand" href="/music">Explore Music</a>
                         @endif
           
                     </div>
@@ -59,7 +66,7 @@
             <footer class="footer" id = "footer">
                 <div class="container">
                     <br>
-                    <span>
+                    <span style="color: white">
                         TechHub © 2017
                     </span>
                 </div>
