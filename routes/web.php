@@ -24,12 +24,11 @@ Route::get('/', function () {
 });
 Route::get('/m/{name}', "MusicController@fetch_info");
 
-Route::post('/m/{name}', "MusicController@add_review");
 
-Route::get('/test', function()
-	{
-		return view('test');
-	});
+Route::post('/post', "MusicController@add_review");
+
+Route::get('/like', "MusicController@like");
+
 
 Auth::routes();
 

@@ -5,6 +5,7 @@
 @section('style')
 <link href="/css/music.css" rel = "stylesheet" type = "text/css"/>
 <link rel="stylesheet" href="/css/font-awesome.min.css">
+<script src= "/js/like.js"></script>
 @endsection
 @section('content')
 	<?php extract($info)?>
@@ -21,7 +22,7 @@
 				<p>Created on {{$created_at}} </p>
 				<p>{{$likes}}  
 				@if(auth::check())
-					<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+					<i class="fa fa-thumbs-up" aria-hidden="true" style = "color:{{$like_color}}" id = "thumb"></i>
 				@endif
 				</p>
 			</span>
@@ -56,16 +57,16 @@
 		</table>
 		@endif
 	</div>
-	@if(auth::check())
-
 		<div>
-	        <form class="submit_review" method = "post" action = "/m/just">
+	        <form class="submit_review" method = "post" action = "/post">
 	            <div class="form-group">
 	                <input name = "review" type="text" class="form-control" placeholder = "Your Review Goes Here">
+	                 <input name = "music_id" type = "hidden" value = "{{$id}}"> 
 	            </div>
 	            <button type="submit" class="btn btn-primary glyphicon glyphicon-pencil"> submit</button>
+	            <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 	        </form>
 	        
 		</div>
-	@endif
+
 @endsection

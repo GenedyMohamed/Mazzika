@@ -12,7 +12,7 @@
 
                     <div class="form-group">
                         <label> Password: </label>
-                        <input type="text" class="form-control" placeholder="password" name = "password">
+                        <input type="password" class="form-control" placeholder="password" name = "password">
                     </div>
                     <div class = "form-group">
                         <label>Log in as: </label>
