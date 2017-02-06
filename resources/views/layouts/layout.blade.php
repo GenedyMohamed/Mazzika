@@ -50,7 +50,7 @@
                         <button type="submit" class="btn btn-primary glyphicon glyphicon-search"></button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Explore Music</a></li>
+                        <li class="active"><a href="/music">Explore Music</a></li>
                     </ul>
 
                 </div>
